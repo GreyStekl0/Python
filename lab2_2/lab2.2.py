@@ -4,6 +4,8 @@ from itertools import filterfalse
 from time import perf_counter
 import mymodule
 
+
+# Добавлена функция filterfalse для проверки, является ли строка согласной буквой
 def input_handler(value: Union[int, str]) -> Union[int, str, None]:
     if value == "":
         print("Введено пустое значение.")
@@ -28,6 +30,7 @@ def input_handler(value: Union[int, str]) -> Union[int, str, None]:
         print("Некорректный тип данных.")
         return None
 
+
 def calculator(data_list: List[Union[int, str]]) -> Union[int, str]:
     num = [x for x in data_list if isinstance(x, int)]
     letters = [x for x in data_list if isinstance(x, str)]
@@ -37,11 +40,14 @@ def calculator(data_list: List[Union[int, str]]) -> Union[int, str]:
 
     return max_num, last_letter
 
+#Добавлено измерение времени выполнения с использованием perf_counter
+#Преобразование максимального числа в градусы
+#Вывод времени выполнения
 def calculator_decorator(func):
     def wrapper(data_list: List[Union[int, str]]):
-        start_time = perf_counter()  # Начало замера времени
+        start_time = perf_counter()
         result = func(data_list)
-        end_time = perf_counter()  # Конец замера времени
+        end_time = perf_counter()
 
         odd_negative_count = sum(1 for x in data_list if isinstance(x, int) and x < 0 and x % 2 != 0)
         print(f"Количество нечётных отрицательных значений: {odd_negative_count}")
@@ -51,19 +57,23 @@ def calculator_decorator(func):
 
         max_number, last_letter = result
         if max_number is not None:
-            max_number = degrees(max_number * pi / 2)  # Преобразование числа в градусы с использованием degrees
+            max_number = degrees(max_number * pi / 2)
         print(f"Максимальное значение (в градусах): {max_number}")
         print(f"Ближайшая к концу алфавита буква: {last_letter}")
 
-        print(f"Время выполнения: {end_time - start_time} секунд")  # Вывод времени выполнения
+        print(f"Время выполнения: {end_time - start_time} секунд")
 
         return result
+
     return wrapper
+
 
 @calculator_decorator
 def decorated_calculator(data_list: List[Union[int, str]]):
     return calculator(data_list)
 
+#Добавлена генерация случайных чисел с использованием mymodule
+#Включение сгенерированных чисел в итоговый список данных для decorated_calculator
 def main():
     data_list = []
 
@@ -86,6 +96,7 @@ def main():
             data_list.append(processed_value)
 
     decorated_calculator(data_list + generated_numbers)
+
 
 if __name__ == "__main__":
     main()

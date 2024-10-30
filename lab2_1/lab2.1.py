@@ -1,5 +1,7 @@
 from typing import List, Union
 
+
+# Обрабатывает вводимые значения, принимает целое число или строку, в случае ввода неккоректных данных возвращает None
 def input_handler(value: Union[int, str]) -> Union[int, str, None]:
     if value == "":
         print("Введено пустое значение.")
@@ -23,6 +25,7 @@ def input_handler(value: Union[int, str]) -> Union[int, str, None]:
         return None
 
 
+# Принимает список целых чисел и строк, возвращает максимальное число и ближайшую к концу алфавита букву
 def calculator(data_list: List[Union[int, str]]) -> Union[int, str]:
     num = [x for x in data_list if isinstance(x, int)]
     letters = [x for x in data_list if isinstance(x, str)]
@@ -33,6 +36,11 @@ def calculator(data_list: List[Union[int, str]]) -> Union[int, str]:
     return max_num, last_letter
 
 
+# Декоратор, выводит
+# количество нечётных отрицательных чисел,
+# буквы с изменённым регистром,
+# максимальное число,
+# ближайшую к концу алфавита букву
 def calculator_decorator(func):
     def wrapper(data_list: List[Union[int, str]]):
         result = func(data_list)
@@ -48,6 +56,7 @@ def calculator_decorator(func):
         print(f"Ближайшая к концу алфавита буква: {last_letter}")
 
         return result
+
     return wrapper
 
 
@@ -55,7 +64,7 @@ def calculator_decorator(func):
 def decorated_calculator(data_list: List[Union[int, str]]):
     return calculator(data_list)
 
-
+# Основная функция, принимает значения пока пользователь не введет end
 def main():
     data_list = []
 
@@ -75,6 +84,7 @@ def main():
             data_list.append(processed_value)
 
     decorated_calculator(data_list)
+
 
 if __name__ == "__main__":
     main()
