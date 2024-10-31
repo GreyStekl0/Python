@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ee857ee-5035-4ef3-8d3f-918e7933ac17" name="Changes" comment="2.2">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5ee857ee-5035-4ef3-8d3f-918e7933ac17" name="Changes" comment="gitignore">
+      <change afterPath="$PROJECT_DIR$/lab3_1/menu.1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_1/records.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_1/tables.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3_1/video_catalog.db" beforeDir="false" afterPath="$PROJECT_DIR$/lab3_1/video_catalog.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +127,9 @@
       <workItem from="1730270902226" duration="4159000" />
       <workItem from="1730296549218" duration="1706000" />
       <workItem from="1730348428139" duration="3526000" />
-      <workItem from="1730380074644" duration="160000" />
+      <workItem from="1730380074644" duration="233000" />
+      <workItem from="1730382961788" duration="85000" />
+      <workItem from="1730383055899" duration="692000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -156,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730380200934</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="gitignore">
+      <option name="closed" value="true" />
+      <created>1730380245276</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730380245276</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +193,8 @@
     <MESSAGE value="3.1" />
     <MESSAGE value="2.1 and 2.2" />
     <MESSAGE value="2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.2" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python$1_2.coverage" NAME="1.2 Coverage Results" MODIFIED="1730224805705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1" />
